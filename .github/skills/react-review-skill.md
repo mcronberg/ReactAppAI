@@ -10,6 +10,7 @@ When reviewing React code:
 - Verify routing and hosting assumptions match deployment.
 - Verify data access boundaries and env var safety.
 - Verify core domain logic is isolated and testable.
+- Verify code is modularized so core logic is unit-testable and UI flows are integration-testable.
 - Verify lint/build logs are warning-free.
 - Verify browser console is free of JavaScript errors on tested flows.
 - Verify responsive behavior across mobile, tablet, and desktop.
@@ -20,6 +21,7 @@ When reviewing React code:
 - Verify sensitive or personal data is not present in logs.
 - Verify expected baseline logs are observable in localhost/dev (startup + key action).
 - Verify non-error logs are silent in release runtime.
+- Verify unit tests and Playwright integration tests exist and pass before deployment.
 - Verify logs use stable required event IDs for machine-verifiable checks.
 - Verify log payload includes required contract fields.
 

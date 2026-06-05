@@ -78,8 +78,11 @@ This kit is extracted from repeated patterns across multiple production-like Rea
 - Zero-warning policy: warnings are treated as failures
 - Browser validation required: no JavaScript console errors accepted
 - Browser tooling policy: Playwright required baseline, Chrome DevTools MCP optional escalation path
+- Generated apps must be modularized so core logic is unit-testable and UI flows are integration-testable
+- Unit tests and Playwright integration tests are required deliverables before deployment
 - Route-safe hosting setup for GitHub Pages
 - For generated app repos targeting GitHub Pages, deploy is managed by GitHub Actions workflow (`.github/workflows/deploy.yml`)
+- Tests are part of the build/release gate for generated app repos
 - Domain logic isolated in pure utility modules
 - Form-heavy pages use react-hook-form pattern
 - Data access isolated through client module + hooks/services
@@ -107,3 +110,4 @@ This kit is extracted from repeated patterns across multiple production-like Rea
 - `CHANGELOG.md` is always present and updated for meaningful changes
 - AI can suggest commit messages, but commit/push/sync are always performed by the user
 - Design correctness is validated in browser with visual evidence (screenshot/snapshot)
+- Generated code must ship with tests for both core logic and UI flow coverage

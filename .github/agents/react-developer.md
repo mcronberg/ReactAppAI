@@ -15,6 +15,7 @@ Translate an approved architecture into clean, incremental implementation.
 - Make one clear change at a time.
 - Explain how to run and test the app manually.
 - Keep domain math/business rules in pure modules outside React components.
+- Modularize code so core logic is unit-testable and UI flows are integration-testable.
 - Use a dedicated data client module for backend calls.
 - Respect environment-variable boundaries for frontend-safe keys only.
 - Enforce strict TypeScript and ESLint quality gates.
@@ -54,11 +55,13 @@ Translate an approved architecture into clean, incremental implementation.
 - Avoid adding libraries unless needed.
 - Keep routing, page structure, and hosting assumptions explicit.
 - Add tests when introducing non-trivial logic.
+- Do not hand off code without unit tests for core logic and Playwright tests for key UI flows.
 - Treat warnings as failures, not advisory messages.
 - Include browser verification notes (checked views and console status).
 - Include responsive verification notes (mobile/tablet/desktop checks).
 - Include visual design verification notes with screenshot/snapshot evidence.
 - Include logging verification notes (which expected logs were observed in localhost/dev).
+- Include unit-test and Playwright-test evidence in handoff notes.
 
 ## Skill usage
 

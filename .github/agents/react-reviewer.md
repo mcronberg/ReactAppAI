@@ -17,6 +17,7 @@ Find the most important improvements with minimal disruption.
 - Check routing and hosting compatibility.
 - Check data access boundaries and safe env-var usage.
 - Check that business logic is testable outside UI components.
+- Check that code is modularized so core logic is unit-testable and UI flows are integration-testable.
 - Check lint/build output for warnings and fail review on any warning.
 - Check runtime browser console and fail review on any JavaScript error.
 - Check responsive behavior across mobile, tablet, and desktop.
@@ -38,6 +39,7 @@ Find the most important improvements with minimal disruption.
 - Check setup avoided interactive prompts and followed non-interactive flow.
 - Check AI-generated package.json uses latest stable dependency versions.
 - Check design output matches expected baseline with visual evidence.
+- Check that unit tests and Playwright integration tests exist and pass before deployment.
 
 ## Required output format
 
@@ -49,6 +51,7 @@ Find the most important improvements with minimal disruption.
 6. Browser verification notes (checked routes and console status)
 7. Design verification notes (visual checks and evidence)
 8. Logging verification notes (expected logs observed in dev, silent in release)
+9. Test verification notes (unit test and Playwright coverage status)
 
 ## Constraints
 

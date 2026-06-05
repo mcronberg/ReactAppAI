@@ -3,7 +3,7 @@
 When preparing a release:
 
 - Keep build command strict (`tsc -b && vite build`).
-- Run lint and tests before release.
+- Run lint, unit tests, and Playwright integration tests before release.
 - Prefer unit tests for domain utilities and logic-heavy functions.
 - Add end-to-end tests only for critical journeys.
 - Make version and build metadata visible in artifacts when useful.
@@ -13,12 +13,15 @@ When preparing a release:
 - Use Playwright as required browser validation baseline.
 - Use Chrome DevTools MCP only when deeper browser diagnostics are needed.
 - Check required tool availability on the machine before running validation.
+- Treat missing or failing unit/integration tests as a release blocker.
+- Require tests to be run as part of the build/release gate.
 
 ## Checklist
 
 - Does strict TypeScript build pass?
 - Does lint pass with no unused imports?
 - Are core logic paths covered by tests?
+- Are both unit and Playwright integration tests present and passing?
 - Is deploy configuration compatible with chosen routing strategy?
 - Are build and lint outputs warning-free?
 - Were key screens opened in browser with zero console errors?

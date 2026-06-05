@@ -14,6 +14,7 @@ When validating implemented features:
 - Capture screenshot/snapshot evidence for changed screens.
 - Confirm rendered design matches expected style and layout baseline.
 - Assert expected functional log events in localhost/dev for tested flow.
+- Verify that key UI flows are covered by Playwright integration tests and that core logic has unit tests.
 
 Expected baseline event IDs:
 
@@ -34,3 +35,4 @@ Expected baseline event IDs:
 - Were screenshots/snapshots captured for changed screens?
 - Does visual output match expected design baseline?
 - Were expected event IDs observed for the tested scenario?
+- Were unit tests and Playwright tests executed for the tested scenario?
