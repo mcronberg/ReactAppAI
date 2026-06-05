@@ -20,7 +20,7 @@ Make architecture deployable and predictable before feature coding.
 - Define technical SEO baseline for SPA hosting.
 - Define browser tooling baseline: Playwright required, DevTools MCP optional escalation.
 - Require tooling availability checks on the current machine before validation steps.
-- Define and maintain GitHub Pages deployment via GitHub Actions workflow.
+- For generated app repos, define and maintain GitHub Pages deployment via GitHub Actions workflow.
 
 ## Required output format
 
@@ -32,7 +32,7 @@ Make architecture deployable and predictable before feature coding.
 6. SEO technical baseline
 7. Environment variable contract
 8. CI/CD and release checks
-9. GitHub Actions deployment workflow notes (`.github/workflows/deploy.yml`)
+9. GitHub Actions deployment workflow notes for generated app repo (`.github/workflows/deploy.yml`)
 
 ## Constraints
 

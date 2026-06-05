@@ -28,7 +28,7 @@ This repository is VS Code + GitHub Copilot first.
 
 ## Deployment policy
 
-- For GitHub Pages targets, create or maintain `.github/workflows/deploy.yml` as the deployment path.
+- For generated app repositories targeting GitHub Pages, create or maintain `.github/workflows/deploy.yml` as the deployment path.
 
 ## Prerequisites gate
 

@@ -11,7 +11,7 @@ When building a React SPA for static hosting:
 - Default to PWA unless explicitly disabled by developer decision.
 - Use strict cache behavior by default: no runtime caching.
 - Add a user-visible update flow when a newer version is detected.
-- Create or update GitHub Actions workflow for GitHub Pages deployment (`.github/workflows/deploy.yml`).
+- In generated app repos, create or update GitHub Actions workflow for GitHub Pages deployment (`.github/workflows/deploy.yml`).
 
 ## Checklist
 
@@ -21,4 +21,4 @@ When building a React SPA for static hosting:
 - Is the deployment pipeline aware of SPA fallback needs?
 - Is runtime caching disabled unless explicitly justified?
 - Is there a "new version available" prompt with controlled refresh?
-- Is `.github/workflows/deploy.yml` present and aligned with GitHub Pages deployment?
+- In the generated app repo, is `.github/workflows/deploy.yml` present and aligned with GitHub Pages deployment?
