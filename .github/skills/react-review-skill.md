@@ -18,6 +18,10 @@ When reviewing React code:
 - Verify PDF export uses @react-pdf/renderer with lazy-loaded export flow unless an explicit exception is documented.
 - Verify logging is centralized and disabled in release output.
 - Verify sensitive or personal data is not present in logs.
+- Verify expected baseline logs are observable in localhost/dev (startup + key action).
+- Verify non-error logs are silent in release runtime.
+- Verify logs use stable required event IDs for machine-verifiable checks.
+- Verify log payload includes required contract fields.
 
 ## Review order
 

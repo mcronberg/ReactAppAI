@@ -22,6 +22,9 @@ This repository is VS Code + GitHub Copilot first.
 - Responsive behavior required (mobile/tablet/desktop).
 - Playwright is required baseline for browser validation.
 - Chrome DevTools MCP is optional escalation path.
+- Setup flow must avoid interactive prompts and use non-interactive commands.
+- If AI creates/rewrites package.json, use latest stable package versions.
+- Design must be validated in browser with screenshot/snapshot evidence.
 
 ## Prerequisites gate
 

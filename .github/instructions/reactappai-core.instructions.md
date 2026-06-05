@@ -15,6 +15,9 @@ Mandatory behavior:
 - Only initialize or bump version when user explicitly requests it.
 - Keep `CHANGELOG.md` present and updated for meaningful changes.
 - Do not run commit/push/sync actions; user performs git operations.
+- Avoid interactive scaffolding prompts; use non-interactive setup flow.
+- When AI creates or rewrites package.json, use latest stable dependency versions at generation time.
+- Validate design output against expected visual baseline before handoff.
 
 Implementation standards:
 
@@ -25,3 +28,4 @@ Implementation standards:
 - Centralized logging with `loglevel`, enabled in localhost/dev, disabled in release.
 - PWA default unless explicitly disabled by developer decision.
 - Strict cache policy and update notification pattern.
+- Capture visual validation evidence (screenshots/snapshots) for changed UI.

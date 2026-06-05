@@ -88,10 +88,13 @@ This kit is extracted from repeated patterns across multiple production-like Rea
 - SEO baseline is part of architecture, not optional cleanup
 - Responsive design is mandatory across mobile, tablet, and desktop
 - Modern and simplified UI style follows finansberegninger2026 direction
+- Menus typically use a burger pattern in the top-right corner
 - Chart.js is default when charts are required
 - PDF export follows finansberegninger2026-style pattern using @react-pdf/renderer and lazy loading
 - New apps are bootstrapped from blank Vite React TypeScript with standardized package baseline
 - Bootstrap is AI-executed end-to-end; user is only asked for required decisions
+- Setup avoids interactive prompts by default and uses non-interactive flow
+- If AI writes package.json, dependencies are set to latest stable versions
 - Logging is consistent and centralized, enabled on localhost/dev, disabled in release
 - Prerequisites gate first: Node.js and npm must be verified before all other steps
 - Agents must check required tooling availability on the machine before execution
@@ -100,3 +103,4 @@ This kit is extracted from repeated patterns across multiple production-like Rea
 - Version is initialized or bumped only when the user explicitly requests it
 - `CHANGELOG.md` is always present and updated for meaningful changes
 - AI can suggest commit messages, but commit/push/sync are always performed by the user
+- Design correctness is validated in browser with visual evidence (screenshot/snapshot)

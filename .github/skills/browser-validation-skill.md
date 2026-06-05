@@ -11,6 +11,16 @@ When validating implemented features:
 - Treat any JavaScript console error as a release blocker.
 - Resolve errors before handoff, then re-verify in browser.
 - Document what was checked and final console status.
+- Capture screenshot/snapshot evidence for changed screens.
+- Confirm rendered design matches expected style and layout baseline.
+- Assert expected functional log events in localhost/dev for tested flow.
+
+Expected baseline event IDs:
+
+- `APP_START`
+- `VIEW_READY`
+- `ACTION_SUBMIT`
+- `ACTION_SUCCESS` or `ACTION_ERROR`
 
 ## Checklist
 
@@ -21,3 +31,6 @@ When validating implemented features:
 - Is verification evidence included in handoff notes?
 - Was Playwright available and used for baseline validation?
 - If deep debugging was needed, was DevTools MCP available and used?
+- Were screenshots/snapshots captured for changed screens?
+- Does visual output match expected design baseline?
+- Were expected event IDs observed for the tested scenario?

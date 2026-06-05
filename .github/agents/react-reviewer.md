@@ -25,12 +25,19 @@ Find the most important improvements with minimal disruption.
 - Check that PDF export uses the approved finansberegninger2026-style pattern.
 - Check that logging is centralized and disabled in release builds.
 - Check that sensitive data is not written to logs.
+- Check that expected baseline logs are observable in localhost/dev runtime.
+- Check that non-error logs are silent in release runtime.
+- Check logs use required stable event IDs for functional verification.
+- Check log payloads include required contract keys.
 - Check that Playwright was available and used for baseline browser validation.
 - Check that DevTools MCP usage is documented when escalation was required.
 - Check versioning follows default `0.minor.patch` unless overridden.
 - Check version bump only happened on explicit user request.
 - Check `CHANGELOG.md` exists and is updated for meaningful changes.
 - Check git commit/push/sync actions are left to the user.
+- Check setup avoided interactive prompts and followed non-interactive flow.
+- Check AI-generated package.json uses latest stable dependency versions.
+- Check design output matches expected baseline with visual evidence.
 
 ## Required output format
 
@@ -40,6 +47,8 @@ Find the most important improvements with minimal disruption.
 4. Residual risks and test gaps
 5. Release-readiness notes (build, lint, test, deploy)
 6. Browser verification notes (checked routes and console status)
+7. Design verification notes (visual checks and evidence)
+8. Logging verification notes (expected logs observed in dev, silent in release)
 
 ## Constraints
 

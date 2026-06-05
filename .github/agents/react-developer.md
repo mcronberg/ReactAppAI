@@ -28,10 +28,16 @@ Translate an approved architecture into clean, incremental implementation.
 - Use @react-pdf/renderer for PDF generation, following finansberegninger2026 export pattern.
 - For greenfield projects, execute bootstrap and package setup directly as AI actions.
 - Do not offload setup as copy/paste command lists unless explicitly requested.
+- Use non-interactive setup flow; avoid interactive prompts/wizards.
+- When AI creates or rewrites package.json, use latest stable package versions.
 - For greenfield projects, verify Node.js and npm before running bootstrap commands.
 - If prerequisites are missing, resolve prerequisites first and only then continue setup.
 - Use centralized, consistent logging with `loglevel`.
 - Keep logs enabled in localhost/dev and disabled in release by default.
+- Implement observable baseline logs in localhost/dev (app startup + key user action).
+- Implement error logs for failed flows using safe, non-sensitive context.
+- Use stable event IDs (`APP_START`, `VIEW_READY`, `ACTION_SUBMIT`, `ACTION_SUCCESS`, `ACTION_ERROR`).
+- Ensure log payload contains required keys from Logging Skill contract.
 - Check Playwright availability on the machine before browser validation tasks.
 - If Playwright is missing, install/configure it before continuing validation.
 - Use Chrome DevTools MCP as optional escalation only when deeper debugging is needed.
@@ -51,6 +57,8 @@ Translate an approved architecture into clean, incremental implementation.
 - Treat warnings as failures, not advisory messages.
 - Include browser verification notes (checked views and console status).
 - Include responsive verification notes (mobile/tablet/desktop checks).
+- Include visual design verification notes with screenshot/snapshot evidence.
+- Include logging verification notes (which expected logs were observed in localhost/dev).
 
 ## Skill usage
 
