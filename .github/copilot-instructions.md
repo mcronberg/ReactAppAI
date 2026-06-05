@@ -26,6 +26,10 @@ This repository is VS Code + GitHub Copilot first.
 - If AI creates/rewrites package.json, use latest stable package versions.
 - Design must be validated in browser with screenshot/snapshot evidence.
 
+## Deployment policy
+
+- For GitHub Pages targets, create or maintain `.github/workflows/deploy.yml` as the deployment path.
+
 ## Prerequisites gate
 
 - Verify Node.js and npm before any scaffold/build actions.

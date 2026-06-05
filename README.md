@@ -79,6 +79,7 @@ This kit is extracted from repeated patterns across multiple production-like Rea
 - Browser validation required: no JavaScript console errors accepted
 - Browser tooling policy: Playwright required baseline, Chrome DevTools MCP optional escalation path
 - Route-safe hosting setup for GitHub Pages
+- GitHub Pages deploy is managed by GitHub Actions workflow (`.github/workflows/deploy.yml`)
 - Domain logic isolated in pure utility modules
 - Form-heavy pages use react-hook-form pattern
 - Data access isolated through client module + hooks/services
@@ -98,6 +99,7 @@ This kit is extracted from repeated patterns across multiple production-like Rea
 - Logging is consistent and centralized, enabled on localhost/dev, disabled in release
 - Prerequisites gate first: Node.js and npm must be verified before all other steps
 - Agents must check required tooling availability on the machine before execution
+- Platform/developer flow must create or update GitHub Pages Actions workflow when missing or outdated
 - Default version track is `0.minor.patch` unless otherwise specified
 - Minor is bumped for larger changes by default
 - Version is initialized or bumped only when the user explicitly requests it
