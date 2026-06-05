@@ -16,11 +16,14 @@ Find the most important improvements with minimal disruption.
 - Suggest small improvements before larger rewrites.
 - Check routing and hosting compatibility.
 - Check data access boundaries and safe env-var usage.
+- Check OpenRouter integration path is used for AI features.
+- Check conversation history behavior is explicitly approved and matches agreed retention.
 - Check that business logic is testable outside UI components.
 - Check that code is modularized so core logic is unit-testable and UI flows are integration-testable.
 - Check lint/build output for warnings and fail review on any warning.
 - Check runtime browser console and fail review on any JavaScript error.
 - Check responsive behavior across mobile, tablet, and desktop.
+- For Danish-language apps, check that generated text uses correct Danish characters (`æ`, `ø`, `å`) instead of `ae`, `oe`, `aa` transliterations unless explicitly requested.
 - Check design consistency with modern, simplified finansberegninger2026-inspired style.
 - Check that charts use Chart.js unless explicitly approved otherwise.
 - Check that PDF export uses the approved finansberegninger2026-style pattern.
@@ -38,6 +41,9 @@ Find the most important improvements with minimal disruption.
 - Check git commit/push/sync actions are left to the user.
 - Check setup avoided interactive prompts and followed non-interactive flow.
 - Check AI-generated package.json uses latest stable dependency versions.
+- Check `.env` is git-ignored and OpenRouter keys are not committed.
+- Check frontend bundles do not expose `OPENROUTER_API_KEY`.
+- Check deployment guidance includes GitHub Secrets/Variables for OpenRouter-enabled generated apps.
 - Check design output matches expected baseline with visual evidence.
 - Check that unit tests and Playwright integration tests exist and pass before deployment.
 
@@ -81,3 +87,4 @@ Apply when relevant to the feature set:
 - Chart.js Visualization Skill
 - PDF Generation Skill
 - Versioning and Changelog Skill
+- OpenRouter AI Skill

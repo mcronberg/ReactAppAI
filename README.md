@@ -49,6 +49,7 @@ This kit is extracted from repeated patterns across multiple production-like Rea
 - React App Bootstrap Skill
 - Logging Skill
 - Versioning and Changelog Skill
+- OpenRouter AI Skill
 
 ## Suggested flow
 
@@ -100,10 +101,17 @@ This kit is extracted from repeated patterns across multiple production-like Rea
 - Setup avoids interactive prompts by default and uses non-interactive flow
 - If AI writes package.json, dependencies are set to latest stable versions
 - Logging is consistent and centralized, enabled on localhost/dev, disabled in release
+- OpenRouter is the default AI gateway for generated apps
+- OpenRouter integrations use latest stable `@openrouter/sdk` when AI writes package.json
+- Local AI config is stored in `.env` (`OPENROUTER_API_KEY`, `OPENROUTER_MODEL`) and ignored by git
+- Frontend apps must never expose privileged secrets; route AI calls through a backend/edge proxy for production static hosting
+- Before implementing AI chat flows, explicitly ask whether conversation history should be included and how much history to keep
+- For Danish-language apps, generated copy must use `æ`, `ø`, `å` (not `ae`, `oe`, `aa`) unless explicitly requested
 - Prerequisites gate first: Node.js and npm must be verified before all other steps
 - Agents must check required tooling availability on the machine before execution
 - Platform/developer flow must create or update GitHub Pages Actions workflow when missing or outdated
 - GitHub Pages workflow policy applies to generated app repos, not this library repo
+- For generated app repos, deployment guidance must include required GitHub Secrets/Variables setup for OpenRouter key handling
 - Default version track is `0.minor.patch` unless otherwise specified
 - Minor is bumped for larger changes by default
 - Version is initialized or bumped only when the user explicitly requests it

@@ -1,0 +1,15 @@
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Node artifacts
+node_modules/
+dist/
+coverage/
+playwright-report/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/*.log

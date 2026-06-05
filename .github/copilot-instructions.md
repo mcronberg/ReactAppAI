@@ -25,10 +25,13 @@ This repository is VS Code + GitHub Copilot first.
 - Setup flow must avoid interactive prompts and use non-interactive commands.
 - If AI creates/rewrites package.json, use latest stable package versions.
 - Design must be validated in browser with screenshot/snapshot evidence.
+- OpenRouter is the default AI provider path for generated app integrations.
+- Ask explicitly whether and how much conversation history should be included before implementing AI chat behavior.
 
 ## Deployment policy
 
 - For generated app repositories targeting GitHub Pages, create or maintain `.github/workflows/deploy.yml` as the deployment path.
+- For generated app repositories with OpenRouter usage, include deployment guidance for GitHub Secrets/Variables and never commit `.env` secrets.
 
 ## Prerequisites gate
 

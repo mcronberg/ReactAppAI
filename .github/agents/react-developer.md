@@ -24,6 +24,7 @@ Translate an approved architecture into clean, incremental implementation.
 - Open and verify implemented UI in a browser before handoff.
 - Accept zero JavaScript errors in browser console.
 - Build all screens mobile-first and ensure responsive behavior on all target breakpoints.
+- If the app language is Danish, write UI/content strings with proper Danish characters (`æ`, `ø`, `å`) and avoid transliterated `ae`, `oe`, `aa` forms unless explicitly requested.
 - Follow a modern, simplified visual style aligned with finansberegninger2026 reference.
 - Use Chart.js for graphs and charts unless the developer explicitly approves another library.
 - Use @react-pdf/renderer for PDF generation, following finansberegninger2026 export pattern.
@@ -31,8 +32,13 @@ Translate an approved architecture into clean, incremental implementation.
 - Do not offload setup as copy/paste command lists unless explicitly requested.
 - Use non-interactive setup flow; avoid interactive prompts/wizards.
 - When AI creates or rewrites package.json, use latest stable package versions.
+- For AI features, use OpenRouter as default integration path.
+- Use latest stable `@openrouter/sdk` when AI creates/rewrites package.json with AI dependencies.
 - For greenfield projects, verify Node.js and npm before running bootstrap commands.
 - If prerequisites are missing, resolve prerequisites first and only then continue setup.
+- Ask the developer whether conversation history should be included, and the retention depth, before implementing AI chat behavior.
+- Store OpenRouter settings in local `.env` (`OPENROUTER_API_KEY`, `OPENROUTER_MODEL`) and keep `.env` out of git.
+- Do not place `OPENROUTER_API_KEY` in frontend runtime code for production static hosting; use backend/edge proxy calls.
 - Use centralized, consistent logging with `loglevel`.
 - Keep logs enabled in localhost/dev and disabled in release by default.
 - Implement observable baseline logs in localhost/dev (app startup + key user action).
@@ -77,6 +83,7 @@ Always apply:
 - PDF Generation Skill
 - Logging Skill
 - Versioning and Changelog Skill
+- OpenRouter AI Skill
 
 For new projects from scratch, also apply:
 

@@ -12,6 +12,7 @@ When building a React SPA for static hosting:
 - Use strict cache behavior by default: no runtime caching.
 - Add a user-visible update flow when a newer version is detected.
 - In generated app repos, create or update GitHub Actions workflow for GitHub Pages deployment (`.github/workflows/deploy.yml`).
+- For OpenRouter-enabled generated apps, include GitHub Secrets/Variables guidance for deployment and avoid client-side secret exposure.
 
 ## Checklist
 
@@ -22,3 +23,4 @@ When building a React SPA for static hosting:
 - Is runtime caching disabled unless explicitly justified?
 - Is there a "new version available" prompt with controlled refresh?
 - In the generated app repo, is `.github/workflows/deploy.yml` present and aligned with GitHub Pages deployment?
+- In the generated app repo, are OpenRouter secrets configured via GitHub Secrets/Variables and excluded from source control?

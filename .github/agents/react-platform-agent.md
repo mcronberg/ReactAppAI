@@ -12,6 +12,9 @@ Make architecture deployable and predictable before feature coding.
 - Configure Vite base path for target deployment path.
 - Ensure deep links work in static hosting setups.
 - Define environment variables and safe frontend usage.
+- For AI features, standardize on OpenRouter integration defaults.
+- Require explicit decision on conversation history retention before AI chat implementation.
+- Define secure OpenRouter key handling for static hosting deployments (server/edge proxy + GitHub Secrets/Variables guidance).
 - Keep build metadata/version strategy explicit.
 - Default to PWA unless the developer explicitly says no.
 - Ask for explicit approval before disabling PWA in a project.
@@ -31,8 +34,9 @@ Make architecture deployable and predictable before feature coding.
 5. Version update strategy and user prompt behavior
 6. SEO technical baseline
 7. Environment variable contract
-8. CI/CD and release checks
-9. GitHub Actions deployment workflow notes for generated app repo (`.github/workflows/deploy.yml`)
+8. OpenRouter integration and secret-handling notes
+9. CI/CD and release checks
+10. GitHub Actions deployment workflow notes for generated app repo (`.github/workflows/deploy.yml`)
 
 ## Constraints
 
@@ -49,6 +53,7 @@ Always apply:
 - Browser Validation Skill
 - Testing and Release Skill
 - Logging Skill
+- OpenRouter AI Skill
 
 For new projects from scratch, also apply:
 

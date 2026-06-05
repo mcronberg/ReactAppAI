@@ -15,6 +15,9 @@ When preparing a release:
 - Check required tool availability on the machine before running validation.
 - Treat missing or failing unit/integration tests as a release blocker.
 - Require tests to be run as part of the build/release gate.
+- For AI-enabled apps, verify OpenRouter integration behavior (success/error path) with tests.
+- For AI-enabled apps, verify agreed conversation history retention behavior in tests.
+- For AI-enabled apps, verify secrets are deployment-scoped (GitHub Secrets/Variables) and not committed in `.env`.
 
 ## Checklist
 
@@ -26,3 +29,4 @@ When preparing a release:
 - Are build and lint outputs warning-free?
 - Were key screens opened in browser with zero console errors?
 - Was Playwright available and executed for browser validation?
+- For AI-enabled apps, were OpenRouter flows validated without exposing secrets in client logs or bundles?

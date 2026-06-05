@@ -14,6 +14,11 @@ When creating a new blank React app from scratch:
 - Validate app in browser with zero JavaScript console errors.
 - Use non-interactive commands/flags and avoid wizard-style prompts.
 - If AI creates or rewrites package.json, use latest stable versions for dependencies/devDependencies.
+- For AI-enabled apps, use OpenRouter as default provider path.
+- For AI-enabled apps, install latest stable `@openrouter/sdk` when AI writes package.json.
+- For AI-enabled apps, create local `.env` with `OPENROUTER_API_KEY` and `OPENROUTER_MODEL` placeholders.
+- Ensure `.env` is git-ignored.
+- Ask whether conversation history should be enabled and how much history to retain before implementing chat state.
 - Install unit testing and Playwright integration testing tooling from the start.
 - Configure test scripts so unit and UI/integration tests run in the repo by default.
 
@@ -46,10 +51,11 @@ When creating a new blank React app from scratch:
    - @supabase/supabase-js
    - @tanstack/react-query
 7. Add PWA defaults unless explicitly disabled.
-8. Run lint, build, and browser verification.
-9. Verify logging behavior: enabled on localhost/dev, disabled in release.
-10. Verify dependency freshness when package.json was AI-generated.
-11. Run unit and Playwright tests as part of initial setup verification.
+8. For AI-enabled apps, add OpenRouter client wiring with secure key handling pattern.
+9. Run lint, build, and browser verification.
+10. Verify logging behavior: enabled on localhost/dev, disabled in release.
+11. Verify dependency freshness when package.json was AI-generated.
+12. Run unit and Playwright tests as part of initial setup verification.
 
 ## Acceptance criteria
 
