@@ -1,0 +1,54 @@
+# React App Bootstrap Skill
+
+When creating a new blank React app from scratch:
+
+- The AI agent performs all setup steps directly (no copy/paste instructions to the user).
+- Verify Node.js and npm first as a hard prerequisite gate.
+- If Node.js is missing, install or guide installation before continuing.
+- Use Vite with React + TypeScript template.
+- Install baseline dependencies used by team standards.
+- Configure strict lint/build gates from day one.
+- Configure routing/hosting base path early.
+- Add PWA setup by default unless developer explicitly opts out.
+- Set strict cache policy and version update strategy.
+- Validate app in browser with zero JavaScript console errors.
+
+## Interaction rule
+
+- Ask the developer only for required decisions (for example app name, hosting path, and optional stack choices).
+- After decisions are provided, execute setup end-to-end without manual command handoff.
+
+## Default bootstrap flow
+
+1. Verify prerequisites: Node.js and npm available and working.
+2. Create app with Vite React TypeScript template.
+3. Install core packages:
+   - tailwindcss and @tailwindcss/vite
+   - react-router-dom
+   - react-hook-form
+   - chart.js
+   - @react-pdf/renderer
+   - loglevel
+4. Add quality tooling:
+   - eslint with TypeScript and react-hooks rules
+   - strict TypeScript config
+5. Add platform defaults:
+   - correct Vite base path
+   - router strategy for hosting
+   - SPA fallback strategy where needed
+6. Add optional data stack only when needed:
+   - @supabase/supabase-js
+   - @tanstack/react-query
+7. Add PWA defaults unless explicitly disabled.
+8. Run lint, build, and browser verification.
+9. Verify logging behavior: enabled on localhost/dev, disabled in release.
+
+## Acceptance criteria
+
+- Lint has zero warnings.
+- Build has zero warnings.
+- App is responsive on mobile, tablet, and desktop.
+- Browser console has zero JavaScript errors.
+- Required baseline libraries are installed and used consistently.
+- Logging is centralized and environment-gated correctly.
+- Node.js and npm prerequisites are satisfied before scaffold starts.
